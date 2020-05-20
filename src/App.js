@@ -1,9 +1,10 @@
 import React from 'react';
+import Data from './Data';
 
 function App({text}) {
   return(
   <div>
-    <h1>{text}</h1>
+    <Data />
   </div>
   );
 }
