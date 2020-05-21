@@ -1,22 +1,25 @@
 {
-  "name": "cookie_swc",
+  "name": "cookies_swc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.15",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export PORT=3000 && react-scripts start",
     "build": "react-scripts build",
     "server": "nodemon server.js",
-    "dev" : "concurrently \"npm run server\" \"npm start\""
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": "react-app"
