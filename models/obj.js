@@ -8,16 +8,3 @@ var objSchema = new Schema({
 });
 
 module.exports = mongoose.model('obj', objSchema);
-
-// DEFINE MODEL
-var OBJ = mongoose.model('obj', objSchema);
-
-var obj = new OBJ({
-    name: "NodeJS Tutorial",
-    author: "velopert"
-});
-obj.save(function(err, obj){
-    if(err) return console.error(err);
-    console.dir(obj);
-});
-
