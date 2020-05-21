@@ -23,4 +23,16 @@
 	- git merge cookies_swc master
 - 상태 확인
 	- git status
-	
+
+## MongoDB 계정 생성
+
+### 1. MongoDB 실행
+- $ sudo mongod
+### 2. MongoDB SHELL
+- $ sudo mongo
+- >> use admin
+- >> db.createUser({user:'root',pwd:'root',roles:['root']})
+- >> exit
+- MongoDB 끄기
+### 3. MongoDB 실행
+- $ sudo mongod -auth (항상 -auth 옵션으로 실행)
