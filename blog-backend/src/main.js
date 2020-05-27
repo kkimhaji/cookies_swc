@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('@koa/cors');
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
@@ -28,6 +29,9 @@ const router = new Router();
 // 라우터 설정
 router.use('/api', api.routes()); // api 라우트 적용
 
+// CORS 설정
+app.use(cors());
+
 // 라우터 적용 전에 bodyParser 적용
 app.use(bodyParser());
 app.use(jwtMiddleware);
@@ -44,6 +48,7 @@ app.use(async ctx => {
     await send(ctx, 'index.html', { root: buildDirectory });
   }
 });
+
 
 // PORT 가 지정되어있지 않다면 4000 을 사용
 const port = PORT || 4000;

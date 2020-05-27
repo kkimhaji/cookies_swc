@@ -108,7 +108,7 @@ const removeHtmlAndShorten = body => {
 };
 
 /*
-  GET /api/posts?username=&tag=&page=
+  GET /api/posts?username=&tag=&page=&title
 */
 export const list = async ctx => {
   // query 는 문자열이기 때문에 숫자로 변환해주어야합니다.
@@ -120,11 +120,13 @@ export const list = async ctx => {
     return;
   }
 
-  const { tag, username } = ctx.query;
+  const re = new RegExp('^' + ctx.query.title);
+  const { tag, username, title } = ctx.query;
   // tag, username 값이 유효하면 객체 안에 넣고, 그렇지 않으면 넣지 않음
   const query = {
     ...(username ? { 'user.username': username } : {}),
     ...(tag ? { tags: tag } : {}),
+    ...(title ? { title: {$regex: re} } : {})
   };
 
   try {

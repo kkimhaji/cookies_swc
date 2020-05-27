@@ -9,11 +9,10 @@ import { Helmet } from 'react-helmet-async';
 
 const App = () => {
   return (
-    <>
+    <> 
       <Helmet>
         <title>REACTERS</title>
       </Helmet>
-
       <Route component={PostListPage} path={['/@:username', '/']} exact />
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />
