@@ -116,7 +116,7 @@ const TagBox = ({ tags, onChangeTags }) => {
   }, [tags]);
 
   return (
-    <TagBoxBlock>
+    <TagBoxBlock style={{marginLeft:333,marginRight:333}}>
       <h4>태그</h4>
       <TagForm onSubmit={onSubmit}>
         <input

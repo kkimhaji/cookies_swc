@@ -7,14 +7,13 @@ import { Helmet } from 'react-helmet-async';
 
 const WritePage = () => {
   return (
-    <Responsive>
+    <Responsive style={{marginLeft:0,marginRight:0}}>
       <Helmet>
         <title>글 작성하기 - COOKIES</title>
       </Helmet>
-
-      <EditorContainer />
-      <TagBoxContainer />
-      <WriteActionButtonsContainer />
+      <EditorContainer/>
+      <TagBoxContainer/>
+      <WriteActionButtonsContainer/>
     </Responsive>
   );
 };
