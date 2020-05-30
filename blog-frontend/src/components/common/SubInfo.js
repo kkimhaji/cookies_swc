@@ -18,6 +18,14 @@ const SubInfoBlock = styled.div`
     padding-right: 0.25rem;
     content: '\\B7'; /* 가운뎃점 문자 */
   }
+  a {
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  a:hover{
+    color: #7b7b7b;
+  }
 `;
 
 const SubInfo = ({ username, publishedDate, hasMarginTop }) => {

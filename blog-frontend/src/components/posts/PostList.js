@@ -39,6 +39,14 @@ const PostItemBlock = styled.div`
   p {
     margin-top: 2rem;
   }
+  a {
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  a:hover{
+    color: #7b7b7b;
+  }
 `;
 
 const PostItem = ({ post }) => {
