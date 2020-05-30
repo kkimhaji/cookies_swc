@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link} from 'react-router-dom';
-import 'bulma';
+import 'bulma/css/bulma.css';
 import axios from 'axios';
 
 
@@ -115,7 +115,7 @@ const Search = ({history}) => {
           }
 
           handleKeyPress(target){
-            if(target.charCode==13){
+            if(target.charCode===13){
               history.push(`/?title=${this.state.value}`);
             }
           }
